@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Jeu de serpent cobra, Cobra snake game."/>
+    <meta content="www.serpentcobragame.com" property="og:title" />
+    <meta property="og:type" content="website" />
+    <meta content="images/cobra_snake_game.png" property="og:image" />
+    <meta property="og:url" content="https://www.serpentcobragame.com" />
+    <title>Jeu de Snake</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <main>
+        <!--Zone de jeu-->
+        <div class="game-zone">
+            <div class="logo-score">
+                <span id="logo"><span id="logo-c">C</span>obra</span>
+                <div id="score">Score: 0</div>
+            </div>
+            <div class="canvas-and-btn">
+                <canvas id="gameCanvas" width="600px" height="600px"></canvas>
+            
+                <div id="controls">
+                    <button class="ctrlBtn" id="playBtn" onclick="document.getElementById('damso').play();"><img src="images/play.svg" alt="play button"></button>
+                    <button class="ctrlBtn" id="pauseBtn" style="display:none;"><img src="images/pause.svg" alt="pause button"></button>
+                    <button class="ctrlBtn" id="restartBtn" style="display:none;" onclick="document.getElementById('damso').play();"><img src="images/play.svg" alt="play button"></button>
+                </div>
+            </div>
+        </div>
+        
+        <!--Sauvegarder les scores-->
+        <div id="save-score">
+            <div id="nameInput" style="display:none;">
+                <p>GAME OVER !</p>
+                <input class="save" type="text" id="playerName" placeholder="enter your name"><br><br>
+                <button class="save" id="submitScore">Save</button>
+            </div>
+            <img id="closeOver" src="images/close.svg" alt="close button">
+        </div>
+    
+        <!--Meilleurs scores-->
+        <div id="best-score">
+            <div class="centeur" id="tbscore1">
+                <p id="titreScore">Best Scores</p>
+            </div>
+            <div class="centeur" id="tbscore2">
+                    <table id="rang">
+                        <tr><th>#</th></tr>
+                        <tr><th>1</th></tr>
+                        <tr><th>2</th></tr>
+                        <tr><th>3</th></tr>
+                        <tr><th>4</th></tr>
+                        <tr><th>5</th></tr>
+                        <tr><th>6</th></tr>
+                        <tr><th>7</th></tr>
+                        <tr><th>8</th></tr>
+                        <tr><th>9</th></tr>
+                        <tr><th>10</th></tr>
+                        <tr><th>11</th></tr>
+                        <tr><th>12</th></tr>
+                        <tr><th>13</th></tr>
+                        <tr><th>14</th></tr>
+                        <tr><th>15</th></tr>
+                    </table>
+        
+                    <table id="scoreTable">
+                        <tr>
+                            <th>Name</th>
+                            <th>Score</th>
+                        </tr>
+                    </table>
+            </div>
+            <img class="closeBtn" id="closeScore" src="images/close.svg" alt="close button">
+        </div>
+    
+        <audio src="audios/damso.mp3" id="damso" loop="true"></audio>
+        <audio src="audios/game-over.mp3" id="gamover"></audio>
+        <audio src="audios/snake-deplass.mp3" id="deplass"></audio>
+        <audio src="audios/tchop.mp3" id="tchop"></audio>
+        <audio src="audios/owl.mp3" id="sonenter"></audio>
+
+        <script src="script.js"></script>
+    </main>
+</body>
+</html>
