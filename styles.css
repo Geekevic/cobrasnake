@@ -79,7 +79,6 @@ main::before{
   margin: 0 auto;
   flex-wrap: wrap;
   justify-items: center;
-  display: block;
 }
 
 #gameCanvas {
@@ -294,7 +293,8 @@ button img:hover {
 }
 
 #closeOver{
-  margin-top: 2%;
+  margin: 32px auto !important;
+  display: block !important;
 }
 
 .save {
