@@ -177,11 +177,11 @@ function submitScore() {
   
   scores.push({ name: playerName, score });
   
-  // Trier et garder les 15 meilleurs scores
+  // Trier et garder les 10 meilleurs scores
   scores.sort((a, b) => b.score - a.score);
   
-  if (scores.length > 15 ) {
-      scores.splice(15);
+  if (scores.length > 10 ) {
+      scores.splice(10);
   }
 
   localStorage.setItem('scores', JSON.stringify(scores));
