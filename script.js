@@ -73,6 +73,42 @@ function directionControl(event) {
     else if (event.keyCode == 40 && direction != "UP") direction = "DOWN";
 }
 
+let touchStartX = 0;
+let touchStartY = 0;
+let touchEndX = 0;
+let touchEndY = 0;
+
+canvas.addEventListener("touchstart", e => {
+    touchStartX = e.touches[0].clientX;
+    touchStartY = e.touches[0].clientY;
+    document.getElementById('deplass').play();
+});
+
+canvas.addEventListener("touchend", e => {
+    touchEndX = e.changedTouches[0].clientX;
+    touchEndY = e.changedTouches[0].clientY;
+    handleGesture();
+});
+
+function handleGesture() {
+    const dx = touchEndX - touchStartX;
+    const dy = touchEndY - touchStartY;
+
+    if (Math.abs(dx) > Math.abs(dy)) { // Mouvement horizontal
+        if (dx > 0 && direction !== "LEFT") {
+            direction = "RIGHT";
+        } else if (direction !== "RIGHT") {
+            direction = "LEFT";
+        }
+    } else { // Mouvement vertical
+        if (dy > 0 && direction !== "UP") {
+            direction = "DOWN";
+        } else if (direction !== "DOWN") {
+            direction = "UP";
+        }
+    }
+}
+
 //_____________dessinner le serpent____________
 function draw() {
     if (snake[0].x > canvas.width - box || snake[0].x < 0 || snake[0].y > canvas.height - box || snake[0].y < 0 || collision(snake[0], snake)) {
