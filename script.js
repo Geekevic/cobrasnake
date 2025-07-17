@@ -1,18 +1,3 @@
-
-//juste pour afficher la premiere image
-
-/*
-const imagesnake2 = document.getElementById("snake2");
-imagesnake2.style.display = "block";
-document.getElementById('sonenter').play();
-setTimeout(()=>{
-    imagesnake2.style.display = "none";
-}, 2000);
-
-*/
-
-
-//________________________________________
 const canvas = document.getElementById("gameCanvas");
 const ctx = canvas.getContext("2d");
 
