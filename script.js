@@ -36,7 +36,7 @@ function startGame() {
     pauseBtn.style.display = 'inline';
     restartBtn.style.display = 'none';
     
-    gameInterval = setInterval(draw, 125); //vitesse (decroissante)
+    gameInterval = setInterval(draw, 240); //vitesse (decroissante)
 }
 
 function togglePause() {
