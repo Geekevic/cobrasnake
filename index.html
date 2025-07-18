@@ -1,31 +1,37 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Jeu de serpent cobra, Cobra snake game."/>
+    <meta name="description" content="Jeu classique du serpent | Classique snake game"/>
     <meta content="www.serpentcobragame.onrender.com" property="og:title" />
     <meta property="og:type" content="website" />
     <meta content="images/cobra_snake_game.png" property="og:image" />
-    <meta property="og:url" content="https://serpentcobragame.onrender.com" />
-    <title>Snake Game</title>
+    <meta property="og:url" content="https://www.serpentcobragame.onrender.com" />
+    <title>Jeu de Snake</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <header>
+        <nav class="entete">
+            <img src="images/play.svg" alt="Icon image" id="icon">
+            <img src="images/pause.svg" alt="Burger button" id="burger">
+        </nav>
+    </header>
     <main>
         <!--Zone de jeu-->
         <div class="game-zone">
             <div class="logo-score">
-                <span id="logo"><span id="logo-c">c</span>obra</span>
-                <div id="score">Score: 0</div>
+                <span id="logo"><span id="logo-c">C</span>obra</span>
+                <div id="score">score: 0</div>
             </div>
             <div class="canvas-and-btn">
                 <canvas id="gameCanvas" width="600px" height="600px"></canvas>
             
                 <div id="controls">
-                    <button class="ctrlBtn" id="playBtn" onclick="document.getElementById('damso').play();"><img src="images/play.svg" alt="play button"></button>
-                    <button class="ctrlBtn" id="pauseBtn" style="display:none;"><img src="images/pause.svg" alt="pause button"></button>
-                    <button class="ctrlBtn" id="restartBtn" style="display:none;" onclick="document.getElementById('damso').play();"><img src="images/play.svg" alt="play button"></button>
+                    <button class="ctrlBtn" id="playBtn" onclick="document.getElementById('damso').play();"><img src="images/play.svg" alt="play button" class="btn"></button>
+                    <button class="ctrlBtn" id="pauseBtn" style="display:none;"><img src="images/pause.svg" alt="pause button" class="btn"></button>
+                    <button class="ctrlBtn" id="restartBtn" style="display:none;" onclick="document.getElementById('damso').play();"><img src="images/play.svg" alt="play button" class="btn"></button>
                 </div>
             </div>
         </div>
