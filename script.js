@@ -26,8 +26,8 @@ submitScoreBtn.addEventListener("click", submitScore);
 document.addEventListener("keydown", directionControl);
 
 function startGame() {
-    snake = [{ x: 9 * box, y: 9 * box }];
-    direction = null;
+    snake = [{ x: 1 * box, y: 1 * box }];
+    direction = "RIGHT";
     food = spawnFood();
     score = 0;
     scoreDisplay.innerText = 'score:'+ `${score}`;
@@ -158,7 +158,7 @@ function draw() {
 //________faire apparaitre la nourriture__________
 function spawnFood() {
   return {
-      x: Math.floor(Math.random() * (canvas.width / box)) * box,
+      x: Math.floor(Math.random() * (canvas.width  / box)) * box,
       y: Math.floor(Math.random() * (canvas.height / box)) * box
   };
 }
