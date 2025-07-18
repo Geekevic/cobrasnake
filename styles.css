@@ -339,7 +339,7 @@ button img:hover {
   background-attachment: fixed;
   background-color: #022c3d36;
   border: 1px solid #022c3dc9;
-  border-radius: 50%;
+  border-radius: 20%;
 }
 
 /*sauvegarder le score*/
