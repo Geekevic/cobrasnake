@@ -2,6 +2,7 @@ body {
   margin: 0;
   font-family: Old English Text MT, Impact, Arial, sans-serif;
   font-size: 1rem;
+  overflow: hidden;
 }
 
 body::before {
