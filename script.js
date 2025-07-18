@@ -1,7 +1,7 @@
 const canvas = document.getElementById("gameCanvas");
 const ctx = canvas.getContext("2d");
 
-const box = 20; // taille d'une case
+const box = 30; // taille d'une case
 let snake = [];
 let direction;
 let food;
@@ -55,7 +55,7 @@ function pauseGame() {
 }
 
 function resumeGame() {
-    gameInterval = setInterval(draw, 125);
+    gameInterval = setInterval(draw, 240);
     isPaused = false;
     document.getElementById('damso').play();
 }
@@ -151,7 +151,7 @@ function draw() {
   const newHead = { x: snakeX, y: snakeY };
   snake.unshift(newHead);
   
-  scoreDisplay.innerText = 'Score: ' +`${score}`;
+  scoreDisplay.innerText = 'score: ' +`${score}`;
   
 }
 
@@ -238,16 +238,11 @@ updateScoreTable();
 
 
 
-
-
-
-
-
-
 // naviguer sur les champs de score
 const bestScore = document.getElementById("best-score");
 const close2 = document.getElementById("closeScore");
 const close1 = document.getElementById("closeOver");
+const burger = document.getElementById("burger");
  
 close2.addEventListener("click", () => {
     bestScore.style.display = 'none';
@@ -260,6 +255,6 @@ document.addEventListener("keydown", (event) => {
 close1.addEventListener("click", () => {
     saveScore.style.display = 'none';
 });
-scoreDisplay.addEventListener("click", () => {
+burger.addEventListener("click", () => {
     bestScore.style.display = 'block';
 });
