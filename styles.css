@@ -256,13 +256,13 @@ main::before{
 #scoreTable {
   display: flex;
   border-collapse: collapse;
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  font-family: inherit;
 }
 
 #scoreTable tr th{
   width: 20vw;
   color: yellow; 
-  font-family: Old English Text MT;
+  font-family: inherit;
 }
 
 #scoreTable tr th, #scoreTable td {
@@ -368,7 +368,7 @@ button img:hover {
 }
 
 #nameInput p {
-  font-family: Impact;
+  font-family: inherit;
   font-size: 2.5em;
   text-align: center;
   color: yellow;
